@@ -1,0 +1,34 @@
+{
+  "name": "aws-api-demo",
+  "private": true,
+  "version": "1.0.0-alpha",
+  "description": "Demo AWS Application featuring REST API with Lambda Triggers and Progressive Web UI hosted on S3",
+  "main": "index.js",
+  "scripts": {
+    "build-web": "pushd ./web ; npm run build",
+    "deploy": "npm run build-web ; npm run plan ; terraform apply \"./.planfile\"",
+    "dock":"docker run --rm -v \"$PWD\"/lambda:/var/task -e AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY -e INCREMENT=50 lambci/lambda:nodejs8.10 handlers/get-values/index.handler \"$(cat ./fixtures/get-request.mock.json)\"",
+    "plan": "terraform plan -out=./.planfile",
+    "reset": "terraform destroy -auto-approve",
+    "setup": "pushd ./lambda ; npm i ; popd ; pushd ./web ; npm i ; popd ; terraform init",
+    "serve-web": "pushd ./web ; npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanschroeder/aws-api-demo.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "api",
+    "terraform",
+    "serverless"
+  ],
+  "author": "Van Schroeder <van@webfreshener.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanschroeder/aws-api-demo/issues"
+  },
+  "homepage": "https://github.com/vanschroeder/aws-api-demo#readme"
+}

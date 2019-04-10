@@ -1,0 +1,17 @@
+{
+  "name": "lambda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "zip": "pushd lambda ; zip -r dist.zip * -x '.DS_Store'"
+  },
+  "author": "Van Schroeder <van@webfreshener.com>",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.401.0",
+    "ofs-utils": "^1.0.0",
+    "rxvo": "git+https://github.com/Webfreshener/RxVO#pipes-tests"
+  }
+}
