@@ -16,7 +16,7 @@ The following commands are available via npm to automate common development task
 |  Name      | Description | Notes |
 | ----------- | ---------------- | ---------------- |
 | build-web | builds Vue Web UI for deployment | |
-| deploy | Compresses Lambda Functions and applies Terraform configs against AWS service configuration  | performs `zip-intake`, `zip-validate` & `terraform apply` |
+| deploy | Builds VueJS UI and applies Terraform configs against AWS service configuration  | performs `build-web`, `plan` & `terraform apply` |
 | dock | Executes `lambda` function in Docker VM for local development 
 | plan | Performs Terraform `plan` against .tf config files |
 | serve-web | starts `vue-cli` development server | |
