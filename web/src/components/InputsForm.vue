@@ -13,27 +13,14 @@
         name: "inputs-form",
         props: ["values"],
         methods: {
-            onChange: function($event) {
-                // const _data = [].concat(this.values);
-                // console.log(this.values.toJSON());
+            onChange: function ($event) {
                 this.$emit('update', this.values.map((v) => {
-                    console.log(v);
                     return Object.defineProperty({}, v.id, {
                         value: v.value,
                         enumerable: true,
                         configurable: true,
                     })
                 }));
-                // const _idx = _data.findIndex((x)=>x.id===$event.target.id);
-                //
-                // if (_idx >= 0) {
-                //     _data.splice(_idx, 0, Object.defineProperty({}, $event.target.id, {
-                //         value: $event.target.value,
-                //         enumerable: true,
-                //         configurable: true,
-                //     }));
-                //     this.$emit('update', _data);
-                // }
             },
         },
     };
