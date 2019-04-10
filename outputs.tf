@@ -6,7 +6,7 @@ output "get-values endpoint" {
   value = "${aws_api_gateway_deployment._.invoke_url}${var.stage_name}/${module.get-values.api_path}"
 }
 
-output "webiste-url" {
+output "website-url" {
   value = "http://${aws_s3_bucket._.website_endpoint}"
 }
 
