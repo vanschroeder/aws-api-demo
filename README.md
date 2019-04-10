@@ -27,18 +27,22 @@ The following commands are available via npm to automate common development task
 
 This Quick Start assumes all `Development Requirements` listed above are met...
 
+*Step 1:* Clone the repo locally
 ```
-$ git clone https://github.com/Webfreshener/aws-api-demo
+$ git clone https://github.com/vanschroeder/aws-api-demo
 ```
 
+*Step 2:* Enter repo working directory 
 ```
 $ cd aws-api-demo
 ```
 
+*Step 3:* Run setup command 
 ```
 $ npm run setup
 ```
 
+*Step 4:* Deploy AWS resources 
 
 ```
 $ npm run deploy
