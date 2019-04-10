@@ -56,7 +56,7 @@ You can do this by pasting the `get-values endpoint` from the console output as 
 
 ##### Deploy the Web UI
 Copy and paste the `sync command` from the console output into the terminal and run it
-you can then use the UI by opening the url listed as `webiste-url` 
+you can then use the UI by opening the url listed as `website-url` 
    
 
 ##### Clean Up 
