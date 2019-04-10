@@ -23,7 +23,8 @@ The following commands are available via npm to automate common development task
 | test | Executes Lambda handlers in Docker VMs for local testing  |
 | reset | destroys all AWS resource deployments | |
 
-#### Quick Start
+### Quick Start
+
 
 This Quick Start assumes all `Development Requirements` listed above are met...
 
@@ -48,7 +49,7 @@ $ npm run setup
 $ npm run deploy
 ```
 
-### Next Steps
+#### Next Steps
 
 ##### Integrate the UI with the API
 You can do this by pasting the `get-values endpoint` from the console output as the **\_\_API_URL\_\_** in `web/src/App.vue`
@@ -58,8 +59,8 @@ Copy and paste the `sync command` from the console output into the terminal and 
 you can then use the UI by opening the url listed as `webiste-url` 
    
 
-#### Clean Up 
-To remove the resources created on AWS
+##### Clean Up 
+To remove the Service Resources & Web UI created by this Module on AWS
 
 ```
 $ npm run reset
